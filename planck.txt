@@ -1,0 +1,258 @@
+Keyboard Layout Editor
+[{x:1.75,c:"#2b2c2e",t:"#909596",p:"DSA",a:7,f:5},"Tab",{c:"#909596",t:"#2b2c2e"},"Q","W","E","R","T","Y","U","I","O","P",{c:"#2b2c2e",t:"#909596"},"Bksp"],
+[{c:"#909596",t:"#2b2c2e",w:1.5},"Middle\n\n\n\n0",{x:0.25,c:"#2b2c2e",t:"#909596"},"Ctrl",{c:"#909596",t:"#2b2c2e"},"A","S","D",{n:true},"F","G","H",{n:true},"J","K","L",{a:5},":\n;","\"\n'"],
+[{x:1.75,c:"#2b2c2e",t:"#909596",a:7},"Shift",{c:"#909596",t:"#2b2c2e"},"Z","X","C","V","B","N","M",{a:5},"<\n,",">\n.","?\n/",{c:"#2b2c2e",t:"#909596",a:7},"Enter"],
+[{x:1.75},"Esc",{a:5},"~\n`",{a:7},"","Alt",{c:"#0075ad",t:"#2b2c2e"},"&dArr;",{c:"#2b2c2e",t:"#909596",w:2},"Space",{c:"#b81b24",t:"#2b2c2e"},"&uArr;",{c:"#2b2c2e",t:"#909596"},"Alt","","Win",{c:"#f16f3b",t:"#2b2c2e"},"Nav"],
+[{y:0.25,x:1.75,c:"#2b2c2e",t:"#909596"},"",{c:"#909596",t:"#2b2c2e"},"1","2","3","4","5","","!","@","#","$",{c:"#2b2c2e",t:"#909596"},""],
+[{c:"#0075ad",t:"#2b2c2e",w:1.5},"Lowred\n\n\n\n1",{x:0.25,c:"#2b2c2e",t:"#909596"},"",{c:"#909596",t:"#2b2c2e"},"6","7","8",{n:true},"9","0","",{n:true},"%","^","&","*","\\"],
+[{x:1.75,c:"#2b2c2e",t:"#909596"},"",{c:"#909596",t:"#2b2c2e"},"F1","F2","","F5","F12","","","","","",{c:"#2b2c2e",t:"#909596"},""],
+[{x:1.75},"","","","",{c:"#0075ad",t:"#2b2c2e",g:true},"&dArr;",{c:"#2b2c2e",t:"#909596",g:false,w:2},"",{c:"#b81b24",t:"#2b2c2e"},"&uArr;",{c:"#2b2c2e",t:"#909596"},"","","","Del"],
+[{y:0.25,x:1.75},"",{c:"#909596",t:"#2b2c2e"},"F1","F2","F3","F4","","","(",")","=","+",{c:"#2b2c2e",t:"#909596"},""],
+[{c:"#b81b24",t:"#2b2c2e",w:1.5},"Raised\n\n\n\n2",{x:0.25,c:"#2b2c2e",t:"#909596"},"",{c:"#909596",t:"#2b2c2e"},"F5","F6","F7",{n:true},"F8","","",{n:true},"{","}","-","_","|"],
+[{x:1.75,c:"#2b2c2e",t:"#909596"},"",{c:"#909596",t:"#2b2c2e"},"F9","F10","F11","F12","","","[","]","","",{c:"#2b2c2e",t:"#909596"},""],
+[{x:1.75},"","","","",{c:"#0075ad",t:"#2b2c2e"},"&dArr;",{c:"#2b2c2e",t:"#909596",w:2},"",{c:"#b81b24",t:"#2b2c2e",g:true},"&uArr;",{c:"#2b2c2e",t:"#909596",g:false},"","","","Del"],
+[{y:0.25,x:1.75},"",{c:"#909596",t:"#2b2c2e"},"","","&uarr;","","","","Home","Page Up","Ins","",{c:"#2b2c2e",t:"#909596"},""],
+[{c:"#f16f3b",t:"#2b2c2e",w:1.5},"Nav\n\n\n\n5",{x:0.25,c:"#2b2c2e",t:"#909596"},"",{c:"#909596",t:"#2b2c2e"},"","&larr;","&darr;",{n:true},"&rarr;","","",{n:true},"End","Page Down","","",""],
+[{x:1.75,c:"#2b2c2e",t:"#909596"},"",{c:"#909596",t:"#2b2c2e"},"","","","","Vol-","Vol+","","","","Prt Scn",{c:"#2b2c2e",t:"#909596"},""],
+[{x:1.75},"","","","",{c:"#0075ad",t:"#2b2c2e"},"Prev",{c:"#2b2c2e",t:"#909596",w:2},"Play/Pause",{c:"#b81b24",t:"#2b2c2e"},"Next",{c:"#2b2c2e",t:"#909596"},"","","",{g:true},"Nav"],
+[{y:0.25,x:1.75,g:false},"",{c:"#909596",t:"#2b2c2e"},"","","","","","",{c:"#eeeeee"},"Num",{c:"#909596"},"","","",{c:"#2b2c2e",t:"#909596",a:5},"Ctrl\nDel\n\n\n\n\nAlt"],
+[{c:"#b81b24",t:"#0075ad",a:7,w:1.5},"Custom\n\n\n\n5",{x:0.25,c:"#2b2c2e",t:"#909596"},"",{c:"#909596",t:"#2b2c2e"},"","","",{n:true},"","","",{n:true},"","","","",""],
+[{x:1.75,c:"#2b2c2e",t:"#909596"},"",{c:"#909596",t:"#2b2c2e"},"","","","","","","","","","",{c:"#2b2c2e",t:"#909596"},""],
+[{x:1.75},"Reset","","","",{c:"#0075ad",t:"#2b2c2e",g:true},"",{c:"#2b2c2e",t:"#909596",g:false,w:2},"Sad",{c:"#b81b24",t:"#2b2c2e",g:true},"",{c:"#2b2c2e",t:"#909596",g:false},"","","",""],
+[{y:0.25,x:1.75},"Tab",{c:"#909596",t:"#2b2c2e"},"","","&uarr;","","","","Num Lock","Num7","Num8","Num9",{c:"#2b2c2e",t:"#909596"},"Num-"],
+[{c:"#eeeeee",t:"#2b2c2e",w:1.5},"Num\n\n\n\n5",{x:0.25,c:"#2b2c2e",t:"#909596"},"Ctrl",{c:"#909596",t:"#2b2c2e"},"","&larr;","&darr;",{n:true},"&rarr;","","",{n:true},"Num/","Num4","Num5","Num6","Num+"],
+[{x:1.75,c:"#2b2c2e",t:"#909596"},"Shift",{c:"#909596",t:"#2b2c2e"},"","","","","","","Num*","Num1","Num2","Num3",{c:"#2b2c2e",t:"#909596"},"="],
+[{x:1.75},"Exit","","","Alt",{c:"#0075ad",t:"#2b2c2e"},"",{c:"#2b2c2e",t:"#909596",w:2},"Space",{c:"#b81b24",t:"#2b2c2e"},"",{c:"#2b2c2e",t:"#909596"},"","Num0","Num.","Num Enter"]
+
+
+
+
+
+Keymap.c
+#include "planck.h"
+#include "action_layer.h"
+#include "eeconfig.h"
+#ifdef BACKLIGHT_ENABLE
+	#include "backlight.h"
+#endif
+
+extern keymap_config_t keymap_config;
+
+#define _QWERTY 0 // QWERTY layer
+#define _LOWER  1 // Lower layer
+#define _RAISE  2 // Raise layer
+#define _NAV    3 // Navigation layer
+#define _CUSTOM 4 // Custom layer (LOWER + RAISE)
+#define _NUM	5 // Numpad layer
+#define _SAD	6 // Sad layer
+#define _BL     7 // Backlight
+
+#define _sad	10 // sad face
+
+//Macro shortcuts
+#define LOWER   M(_LOWER)
+#define RAISE   M(_RAISE)
+#define EXIT	M(_QWERTY)
+
+#define sad		M(_sad)
+
+// Layer shortcuts
+#define NAV		MO(_NAV)
+#define GAME	TG(_GAME)
+#define NUM		TG(_NUM)
+#define SAD		TG(_SAD)
+#define BL		TG(_BL)
+
+
+// Fillers to make layering more clear
+#define _______ KC_TRNS
+#define XXXXXXX KC_NO
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
+/* Qwerty
+ * ,-----------------------------------------------------------------------------------.
+ * | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Crtl |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |  "   |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Enter |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | ESC  |   `  |      | ALT  |Lower |    Space    |Raise | ALT  |      | GUI  | Nav  |
+ * `-----------------------------------------------------------------------------------'
+ */
+[_QWERTY] = {
+  {KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
+  {KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT},
+  {KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT },
+  {KC_ESC,  KC_GRV,  XXXXXXX,  KC_LALT, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_RALT, XXXXXXX, KC_LGUI, NAV    }
+},
+
+/* Lower
+ * ,-----------------------------------------------------------------------------------.
+ * |      |   1  |   2  |   3  |   4  |   5  |      |   !  |   @  |   #  |   $  | Bksp |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |   6  |   7  |   8  |   9  |   0  |      |   %  |   ^  |   &  |   *  |  \   |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |  F1  |  F2  |      |  F5  |  F12 |      |      |      |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |             |      |      |      |      | Del  |
+ * `-----------------------------------------------------------------------------------'
+ */
+[_LOWER] = {
+  {_______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  _______},
+  {_______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    XXXXXXX, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_BSLS},
+  {_______, KC_F1,   KC_F2,   XXXXXXX, KC_F5,   KC_F12,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______},
+  {_______, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL }
+},
+
+/* Raise
+ * ,-----------------------------------------------------------------------------------.
+ * |      |  F1  |  F2  |  F3  |  F4  |      |      |   (  |   )  |   _  |   +  | Bksp |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |  F5  |  F6  |  F7  |  F8  |      |      |   {  |   }  |   -  |   =  |  |   |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |  F9  |  F10 |  F11 |  F12 |      |      |   [  |   ]  |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |             |      |      |      |      | Del  |
+ * `-----------------------------------------------------------------------------------'
+ */
+[_RAISE] = {
+  {_______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX, XXXXXXX, KC_LPRN, KC_RPRN, KC_UNDS, KC_PLUS, KC_DEL },
+  {_______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, KC_MINS, KC_EQL,  KC_PIPE},
+  {_______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, _______},
+  {_______, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL }
+},
+
+/* Nav layer
+ * ,-----------------------------------------------------------------------------------.
+ * |      |      |      |  Up  |      |      |      | Home | PgUp | Ins  |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      | Left | Down |Right |      |      | End  | PgDn |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      | Vol- | Vol+ |      |      |      |PrtScn|      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      | Prev |  Play/Pause | Next |      |      |      |      |
+ * `-----------------------------------------------------------------------------------'
+ */
+
+[_NAV] = {
+  {_______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_PGUP, KC_INS,  XXXXXXX, XXXXXXX},
+  {_______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, KC_END,  KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX},
+  {_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, XXXXXXX},
+  {_______, XXXXXXX, _______, _______, KC_MPRV, KC_MPLY, KC_MPLY, KC_MNXT, _______, _______, _______, _______}
+},
+
+/* Custom (Lower + Raise)
+ * ,-----------------------------------------------------------------------------------.
+ * |      |      |      |      |      |      |      | NUM  |      |      |      | CAD  |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Reset|      |      |      |      |     SAD     |      |      |      |      |      |
+ * `-----------------------------------------------------------------------------------'
+ */
+[_CUSTOM] = {
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, NUM,     XXXXXXX, XXXXXXX, XXXXXXX, LALT(LCTL(KC_DEL))},
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
+  {RESET,   XXXXXXX, XXXXXXX, XXXXXXX, _______, SAD,     SAD,     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX}
+},
+
+/* Numpad layer
+ * ,-----------------------------------------------------------------------------------.
+ * | Tab  |      |      |  Up  |      |      |      | NLck | Num7 | Num8 | Num9 | Num- |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * | Ctrl |      | Left | Down |Right |      |      | Num/ | Num4 | Num5 | Num6 | Num+ |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * | Shift|      |      |      |      |      |      | Num* | Num1 | Num2 | Num3 |   =  |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Exit |      |      | ALT  |      |    Space    |      |      | Num0 | Num. |NmEnt |
+ * `-----------------------------------------------------------------------------------'
+ */
+
+[_NUM] = {
+  {KC_TAB,  XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX, KC_NLCK, KC_P7,   KC_P8,   KC_P9,   KC_PMNS},
+  {KC_LCTL, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, KC_PSLS, KC_P4,   KC_P5,   KC_P6,   KC_PPLS},
+  {KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PAST, KC_P1,   KC_P2,   KC_P3,   KC_EQL },
+  {EXIT,    XXXXXXX, XXXXXXX, KC_LALT, XXXXXXX, KC_SPC,  KC_SPC,  XXXXXXX, XXXXXXX, KC_P0,   KC_PDOT, KC_PENT}
+},
+
+/* Sad layer
+ * ,-----------------------------------------------------------------------------------.
+ * |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |  :(  |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Exit |  :(  |  :(  |  :(  |  :(  |      :(     |  :(  |  :(  |  :(  |  :(  |Enter |
+ * `-----------------------------------------------------------------------------------'
+ */
+
+[_NUM] = {
+  {sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad    },
+  {sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad    },
+  {sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad    },
+  {EXIT,    sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     sad,     KC_ENT }
+},
+
+/* Backlight layer
+ * ,-----------------------------------------------------------------------------------.
+ * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Exit |      |      |      |      |             |      |      |      |      |      |
+ * `-----------------------------------------------------------------------------------'
+ */
+
+[_NUM] = {
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
+  {EXIT,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX}
+}
+
+};
+
+// Macro actions
+const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
+{
+	switch (id) {
+		case _RAISE: // Raised layer
+			if (record->event.pressed) {
+				layer_on(_RAISE);
+				update_tri_layer(_LOWER, _RAISE, _CUSTOM);
+			} else {
+				layer_off(_RAISE);
+				update_tri_layer(_LOWER, _RAISE, _CUSTOM);
+			}
+			break;
+		case _LOWER: // Lowered layer
+			if (record->event.pressed) {
+				layer_on(_LOWER);
+				update_tri_layer(_LOWER, _RAISE, _CUSTOM);
+			} else {
+				layer_off(_LOWER);
+				update_tri_layer(_LOWER, _RAISE, _CUSTOM);
+			}
+			break;
+		case _QWERTY: // exit back to default layer
+			if (record->event.pressed) {
+				layer_clear();
+				clear_keyboard();
+			}
+			break;
+		case _sad: // sad face
+			if (record->event.pressed) {
+				return MACRO( I(10), T(:), T(LPRN), END );
+			}
+			break;
+	}
+	return MACRO_NONE;
+}
