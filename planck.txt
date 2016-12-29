@@ -58,7 +58,6 @@ extern keymap_config_t keymap_config;
 
 // Layer shortcuts
 #define NAV		MO(_NAV)
-#define GAME	TG(_GAME)
 #define NUM		TG(_NUM)
 #define SADS	TG(_SADS)
 #define BL		TG(_BL)
@@ -130,7 +129,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      | Left | Down |Right |      |      | End  | PgDn |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      | Vol- | Vol+ |      |      |      |PrtScn|      |
+ * |      | Mute |      |      |      | Vol- | Vol+ |      |      |      |PrtScn|      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      | Prev |  Play/Pause | Next |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
@@ -139,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NAV] = {
   {_______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_PGUP, KC_INS,  XXXXXXX, XXXXXXX},
   {_______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, KC_END,  KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX},
-  {_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, XXXXXXX},
+  {_______, KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, XXXXXXX},
   {_______, XXXXXXX, _______, _______, KC_MPRV, KC_MPLY, KC_MPLY, KC_MNXT, _______, _______, _______, _______}
 },
 
