@@ -15,7 +15,7 @@ Keyboard Layout Editor
 ["Ctrl","","&larr;","&darr;","&rarr;","","","End","Page Down","","",""],
 ["Shift","","","","","","","","","","","Return"],
 ["","","","Alt","",{g:true},"Fn",{g:false},"","","Win","","",""],
-[{y:1},"","","","","","","","Num","","","","Ctrl Alt Del"],
+[{y:1},"","","","","","","","","","","","Ctrl Alt Del"],
 ["","","","","","","","","","","",""],
 ["","","","","","","","","","","",""],
 ["Reset","","","",{g:true},"&dArr;",{g:false},"BL","SAD",{g:true},"&uArr;",{g:false},"","","",""]
@@ -39,9 +39,8 @@ extern keymap_config_t keymap_config;
 #define _RAISE  2 // Raise layer
 #define _NAV    3 // Navigation layer
 #define _CUSTOM 4 // Custom layer (LOWER + RAISE)
-#define _NUM	5 // Numpad layer
-#define _SADS	6 // Sad layer
-#define _BL     7 // Backlight
+#define _SADS	5 // Sad layer
+#define _BL     6 // Backlight
 
 #define _SAD	10 // sad face
 
@@ -54,7 +53,6 @@ extern keymap_config_t keymap_config;
 #define LOWER   OSL(_LOWER)
 #define RAISE   OSL(_RAISE)
 #define CUSTOM  OSL(_CUSTOM)
-#define NUM		TG(_NUM)
 #define SADS	TG(_SADS)
 #define BL		TG(_BL)
 
@@ -140,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Custom (Lower + Raise)
  * ,-----------------------------------------------------------------------------------.
- * |      |      |      |      |      |      |      | NUM  |      |      |      | CAD  |
+ * |      |      |      |      |      |      |      |      |      |      |      | CAD  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -150,29 +148,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_CUSTOM] = {
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, NUM,     XXXXXXX, XXXXXXX, XXXXXXX, LALT(LCTL(KC_DEL))},
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LALT(LCTL(KC_DEL))},
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
   {RESET,   XXXXXXX, XXXXXXX, XXXXXXX, _______, BL,      SADS,    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX}
-},
-
-/* Numpad layer
- * ,-----------------------------------------------------------------------------------.
- * | Tab  |      |      |  Up  |      |      |      | NLck | Num7 | Num8 | Num9 | Num- |
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl |      | Left | Down |Right |      |      | Num/ | Num4 | Num5 | Num6 | Num+ |
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Shift|      |      |      |      |      |      | Num* | Num1 | Num2 | Num3 | Num= |
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Exit |      |      | ALT  |      |      |      |      |      | Num0 | Num. |NmEnt |
- * `-----------------------------------------------------------------------------------'
- */
-
-[_NUM] = {
-  {KC_TAB,  XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX, KC_NLCK, KC_P7,   KC_P8,   KC_P9,   KC_PMNS},
-  {KC_LCTL, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, KC_PSLS, KC_P4,   KC_P5,   KC_P6,   KC_PPLS},
-  {KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PAST, KC_P1,   KC_P2,   KC_P3,   KC_PEQL},
-  {EXIT,    XXXXXXX, XXXXXXX, KC_LALT, XXXXXXX, XXXXXXX, KC_SPC,  XXXXXXX, XXXXXXX, KC_P0,   KC_PDOT, KC_PENT}
 },
 
 /* Sad layer
