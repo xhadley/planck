@@ -1,24 +1,16 @@
 Keyboard Layout Editor
-[{a:7},"Tab","Q","W","E","R","T","Y","U","I","O","P","Bksp"],
-["Ctrl","A","S","D","F","G","H","J","K","L",";","'"],
-["Shift","Z","X","C","V","B","N","M",",",".","/","Return"],
-["Mute","Vol-","Vol+","Alt","&dArr;","Fn","Sp","&uArr;","Win","Prev","Play/ Pause","Next"],
-[{y:1},"Tab","1","2","3","4","5","","!","@","#","$","Bksp"],
-["Ctrl","6","7","8","9","0","","%","^","&","*","'"],
-["Shift","F1","F2","","F5","F12","","",",",".","/","Return"],
-["","","","Alt",{g:true},"&dArr;",{g:false},"","Sp","&uArr;","Win","","",""],
-[{y:1},"Tab","F1","F2","F3","F4","","","(",")","_","+","Bksp"],
-["Ctrl","F5","F6","F7","F8","","","{","}","-","=","'"],
-["Shift","F9","F10","F11","F12","","","[","]","\\","|","Return"],
-["","","","Alt","&dArr;","","Sp",{g:true},"&uArr;",{g:false},"Win","","",""],
-[{y:1},"Esc",{a:5},"~\n`",{a:7},"","&uarr;","","","","Home","Page Up","Ins","Prt Scn","Del"],
-["Ctrl","","&larr;","&darr;","&rarr;","","","End","Page Down","","",""],
-["Shift","","","","","","","","","","","Return"],
-["","","","Alt","",{g:true},"Fn",{g:false},"","","Win","","",""],
-[{y:1},"","","","","","","","","","","","Ctrl Alt Del"],
-["","","","","","","","","","","",""],
-["","","","","","","","","","","",""],
-["Reset","","","",{g:true},"&dArr;",{g:false},"BL","SAD",{g:true},"&uArr;",{g:false},"","","",""]
+[{x:6.5,a:7},"Tab","Q","W","E","R","T","Y","U","I","O","P","Bksp"],
+[{x:6.5},"Ctrl","A","S","D","F","G","H","J","K","L",";","'"],
+[{x:6.5},"Shift","Z","X","C","V","B","N","M",",",".","/","Return"],
+[{x:6.5},"Mute","Fn","","Alt","&dArr;",{w:2},"Space","&uArr;","Win","Prev","Play/ Pause","Next"],
+[{y:0.5},"Tab","1","2","3","4","5","","!","@","#","$","Bksp",{x:1},"Tab","F1","F2","F3","F4","","","(",")","_","+","Bksp"],
+["Ctrl","6","7","8","9","0","","%","^","&","*","'",{x:1},"Ctrl","F5","F6","F7","F8","","","{","}","-","=","'"],
+["Shift","F1","F2","","F5","F12","","",",",".","/","Return",{x:1},"Shift","F9","F10","F11","F12","","","[","]","\\","|","Return"],
+["","","","Alt",{g:true},"&dArr;",{g:false,w:2},"Space","","Win","","","",{x:1},"","","","Alt","",{w:2},"Space",{g:true},"&uArr;",{g:false},"Win","","",""],
+[{y:0.5},"Esc",{a:5},"~\n`",{a:7},"","&uarr;","","","","Home","Page Up","Ins","Prt Scn","Del",{x:1},"","","","","","","","","","","","Ctrl Alt Del"],
+["Ctrl","","&larr;","&darr;","&rarr;","","","End","Page Down","","","",{x:1},"","","","","","","","","","","",""],
+["Shift","","","","","","","","","","","",{x:1},"","","","","","","","","","","",""],
+["",{g:true},"Fn",{g:false},"","Alt","",{w:2},"Space","","Win","","","Mn",{x:1},"Reset","","","","",{w:2},"BL","SAD","","","","Exit"]
 
 
 
@@ -38,7 +30,7 @@ extern keymap_config_t keymap_config;
 #define _LOWER  1 // Lower layer
 #define _RAISE  2 // Raise layer
 #define _NAV    3 // Navigation layer
-#define _CUSTOM 4 // Custom layer (LOWER + RAISE)
+#define _MENU	4 // Menu layer
 #define _SADS	5 // Sad layer
 #define _BL     6 // Backlight
 
@@ -52,7 +44,7 @@ extern keymap_config_t keymap_config;
 #define NAV		MO(_NAV)
 #define LOWER   MO(_LOWER)
 #define RAISE   MO(_RAISE)
-#define CUSTOM  MO(_CUSTOM)
+#define MENU	TG(_MENU)
 #define SADS	TG(_SADS)
 #define BL		TG(_BL)
 
@@ -89,14 +81,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |  F1  |  F2  |      |  F5  |  F12 |      |      |   ,  |   .  |   /  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = {
   {_______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  _______},
   {_______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    XXXXXXX, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, _______},
   {_______, KC_F1,   KC_F2,   XXXXXXX, KC_F5,   KC_F12,  XXXXXXX, XXXXXXX, KC_COMM, KC_DOT,  KC_SLSH, _______},
-  {XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______, XXXXXXX, CUSTOM,  _______, XXXXXXX, XXXXXXX, XXXXXXX}
+  {XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX}
 },
 
 /* Raise
@@ -107,14 +99,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |  F9  |  F10 |  F11 |  F12 |      |      |   [  |   ]  |   \  |   |  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = {
   {_______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX, XXXXXXX, KC_LPRN, KC_RPRN, KC_UNDS, KC_PLUS, _______},
   {_______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, KC_MINS, KC_EQL,  _______},
   {_______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, KC_BSLS, KC_PIPE, _______},
-  {XXXXXXX, XXXXXXX, XXXXXXX, _______, CUSTOM,  _______, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX}
+  {XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, _______, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX}
 },
 
 /* Nav layer
@@ -125,15 +117,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |      |      |      |      |      |             |      |      |      |      | Menu |
  * `-----------------------------------------------------------------------------------'
  */
 
 [_NAV] = {
   {KC_ESC,  KC_GRV,  XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_PGUP, KC_INS,  KC_PSCR, KC_DEL },
   {_______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, KC_END,  KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX},
-  {_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______},
-  {XXXXXXX, _______, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX}
+  {_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
+  {XXXXXXX, _______, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, MENU   }
 },
 
 /* Custom (Lower + Raise)
@@ -144,14 +136,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Reset|      |      |      |      |  BL  | SAD  |      |      |      |      |      |
+ * | Reset|      |      |      |      |     BL      | SAD  |      |      |      | Exit |
  * `-----------------------------------------------------------------------------------'
  */
 [_CUSTOM] = {
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LALT(LCTL(KC_DEL))},
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, SADS,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
-  {RESET,   XXXXXXX, XXXXXXX, XXXXXXX, _______, BL,      XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX}
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
+  {RESET,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, BL,      XXXXXXX, SADS,    XXXXXXX, XXXXXXX, XXXXXXX, EXIT   }
 },
 
 /* Sad layer
