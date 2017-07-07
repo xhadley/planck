@@ -37,19 +37,45 @@ extern keymap_config_t keymap_config;
 #define _RAISE  3 // Raise layer
 #define _MENU	4 // Menu layer
 #define _SADS	5 // Sad layer
-#define _UG     6 // Underglow
+#define _CELLY	6 // Celly layer
+#define _UG     7 // Underglow
 
 #define _SAD	10 // sad face
+#define _cTEAM	11 // cellyTEAM
+#define _cLOVE	12 // cellyLOVE
+#define _cRADIO	13 // cellyRADIO
+#define _cCHAMP	14 // cellyCHAMP
+#define _cPLS	15 // cellyPLS
+#define _cSAD	16 // cellySAD
+#define _cWTF	17 // cellyWTF
+#define _cS		18 // cellyS
+#define _cLUL	19 // cellyWTF
+#define _cAY	20 // cellyAY
+#define _cRAGE	21 // cellyRAGE
+#define _cWUT	22 // cellyWUT
 
 //Macro shortcuts
 #define EXIT	M(_QWERTY)
 #define LOWER   M(_LOWER)
 #define RAISE   M(_RAISE)
 #define SAD		M(_SAD)
+#define cTEAM	M(_cTEAM)
+#define cLOVE	M(_cLOVE)
+#define cRADIO	M(_cRADIO)
+#define cCHAMP	M(_cCHAMP)
+#define cPLS	M(_cPLS)
+#define cSAD	M(_cSAD)
+#define cWTF	M(_cWTF)
+#define cS		M(_cS)
+#define cLUL	M(_cLUL)
+#define cAY		M(_cAY)
+#define cRAGE	M(_cRAGE)
+#define cWUT	M(_cWUT)
 
 // Layer shortcuts
 #define NAV		MO(_NAV)
 #define SADS	TG(_SADS)
+#define CELLY	TG(_CELLY)
 #define UG		TG(_UG)
 
 
@@ -87,7 +113,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NAV] = {
   {_______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX,                                                               XXXXXXX, KC_HOME, KC_PGUP, KC_INS,  KC_PSCR, KC_DEL },
   {_______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, _______, XXXXXXX, KC_END,  KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX},
-  {_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ENT }
+  {_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______}
 },
 
 /* Lower
@@ -130,7 +156,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * '--------------------------------------------------------------'                                        '--------------------------------------------------------------'
  */
 [_MENU] = {
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LALT(LCTL(KC_DEL))},
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                                               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LALT(LCTL(KC_DEL))},
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
   {UG,      SADS,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET  }
 },
@@ -150,6 +176,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {SAD,     SAD,     SAD,     SAD,     SAD,     SAD,     XXXXXXX, XXXXXXX, EXIT,            XXXXXXX, XXXXXXX, XXXXXXX, SAD,     SAD,     SAD,     SAD,     SAD,     SAD    },
   {SAD,     SAD,     SAD,     SAD,     SAD,     SAD,     XXXXXXX, KC_BSPC, KC_DEL,          KC_ENT,  KC_SPC,  XXXXXXX, SAD,     SAD,     SAD,     SAD,     SAD,     SAD    }
 },
+
+/* Celly layer
+ * .-----------------------------------------.                                                                                  .-----------------------------------------.
+ * |      |      | TEAM | RADIO| PLS  |      |                                                                                  |      | WTF  | LUL  | RAGE |      |      |
+ * |------+------+------+------+------+------+------+------+------.                                        .------+------+------+------+------+------+------+------+------|
+ * |      |      | LOVE | CHAMP| SAD  |      |      |\/\/\/| EXIT |                                        |      |\/\/\/|      |      |   S  |  AY  | WUT  |      |      |
+ * |------+------+------+------+------+------+------+------+------|                                        |------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |      |      |      |      |                                        |      |      |      |      |      |      |      |      |      |
+ * '--------------------------------------------------------------'                                        '--------------------------------------------------------------'
+ */
+
+[_CELLY] = {
+  {XXXXXXX, XXXXXXX, cTEAM,   cRADIO,  cPLS,    XXXXXXX,                                                               XXXXXXX, cWTF,    cLUL,    cRAGE,   XXXXXXX, XXXXXXX},
+  {XXXXXXX, XXXXXXX, cLOVE,   cCHAMP,  cSAD,    XXXXXXX, XXXXXXX, XXXXXXX, EXIT,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, cS,      cAY,     cWUT,    XXXXXXX, XXXXXXX},
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX}
+}
 
 /* Underglow layer
  * .-----------------------------------------.                                                                                  .-----------------------------------------.
@@ -200,6 +242,66 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 		case _SAD: // sad face
 			if (record->event.pressed) {
 				SEND_STRING(":(");
+			}
+			break;
+		case _cTEAM:
+			if (record->event.pressed) {
+				SEND_STRING("cellyTEAM ");
+			}
+			break;
+		case _cLOVE:
+			if (record->event.pressed) {
+				SEND_STRING("cellyLOVE ");
+			}
+			break;
+		case _cRADIO:
+			if (record->event.pressed) {
+				SEND_STRING("cellyRADIO ");
+			}
+			break;
+		case _cCHAMP:
+			if (record->event.pressed) {
+				SEND_STRING("cellyCHAMP ");
+			}
+			break;
+		case _cPLS:
+			if (record->event.pressed) {
+				SEND_STRING("cellyPLS ");
+			}
+			break;
+		case _cSAD:
+			if (record->event.pressed) {
+				SEND_STRING("cellySAD ");
+			}
+			break;
+		case _cWTF:
+			if (record->event.pressed) {
+				SEND_STRING("cellyWTF ");
+			}
+			break;
+		case _cS:
+			if (record->event.pressed) {
+				SEND_STRING("cellyS ");
+			}
+			break;
+		case _cLUL:
+			if (record->event.pressed) {
+				SEND_STRING("cellyLUL ");
+			}
+			break;
+		case _cAY:
+			if (record->event.pressed) {
+				SEND_STRING("cellyAY ");
+			}
+			break;
+		case _cRAGE:
+			if (record->event.pressed) {
+				SEND_STRING("cellyRAGE ");
+			}
+			break;
+		case _cWUT:
+			if (record->event.pressed) {
+				SEND_STRING("cellyWUT ");
 			}
 			break;
 	}
