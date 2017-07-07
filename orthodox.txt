@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Nav layer
  * .-----------------------------------------.                                                                                  .-----------------------------------------.
- * | Tab  |      |      |  Up  |      |      |                                                                                  |      | Home | PgUp | Ins  |PrtScn| Del  |
+ * | Tab  |      | MWL  |  Up  | MWR  |      |                                                                                  |      | Home | PgUp | Ins  |PrtScn| Del  |
  * |------+------+------+------+------+------+------+------+------.                                        .------+------+------+------+------+------+------+------+------|
  * | Shift|      | Left | Down | Right|      |      |\/\/\/|      |                                        |      |\/\/\/| Win  |      | End  | PgDn |      |      |      |
  * |------+------+------+------+------+------+------+------+------|                                        |------+------+------+------+------+------+------+------+------|
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
 [_NAV] = {
-  {_______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX,                                                               XXXXXXX, KC_HOME, KC_PGUP, KC_INS,  KC_PSCR, KC_DEL },
+  {_______, XXXXXXX, KC_WH_L, KC_UP,   KC_WH_R, XXXXXXX,                                                               XXXXXXX, KC_HOME, KC_PGUP, KC_INS,  KC_PSCR, KC_DEL },
   {_______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, _______, XXXXXXX, KC_END,  KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX},
   {_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______}
 },
@@ -148,16 +148,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Menu
  * .-----------------------------------------.                                                                                  .-----------------------------------------.
- * |      |      |      |      |      |      |                                                                                  |      |      |      |      |      | CAD  |
+ * | Celly|      |      |      |      |      |                                                                                  |      |      |      |      |      | CAD  |
  * |------+------+------+------+------+------+------+------+------.                                        .------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |\/\/\/|      |                                        |      |\/\/\/|      |      |      |      |      |      |      |
+ * |      |      |      |      |      |      |      |\/\/\/|      |                                        |      |\/\/\/|      |      |      |      |      |      | NKRO |
  * |------+------+------+------+------+------+------+------+------|                                        |------+------+------+------+------+------+------+------+------|
  * |  UG  | SAD  |      |      |      |      | LOWER|      |      |                                        |      |      | RAISE|      |      |      |      |      | Reset|
  * '--------------------------------------------------------------'                                        '--------------------------------------------------------------'
  */
 [_MENU] = {
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                                               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LALT(LCTL(KC_DEL))},
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
+  {CELLY,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                                               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LALT(LCTL(KC_DEL))},
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, MAGIC_TOGGLE_NKRO},
   {UG,      SADS,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET  }
 },
 
