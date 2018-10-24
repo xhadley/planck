@@ -20,7 +20,6 @@ enum custom_keycodes {
 
 #define KC_     KC_TRNS
 #define KC_XX   KC_NO
-#define _______ KC_TRNS
 
 #define KC_GAME TG(_GAME)
 #define KC_FN   MO(_FN)
@@ -44,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
      ESC ,GRV , XX ,VOLD,VOLU,MUTE,               MUTE,MPRV,MPLY,MNXT,BSLS,DEL ,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-     TAB , Q  , W  , E  , R  , T  ,                Y  , U  , I  , O  , P  ,BSPC ,
+     TAB , Q  , W  , E  , R  , T  ,                Y  , U  , I  , O  , P  ,BSPC,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
      LSFT, A  , S  , D  , F  , G  ,                H  , J  , K  , L  ,SCLN,QUOT,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
