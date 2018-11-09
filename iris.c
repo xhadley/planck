@@ -26,16 +26,6 @@ enum custom_keycodes {
 #define KC_LOWR LOWER
 #define KC_RASE RAISE
 #define KC_RST  RESET
-#define KC_BL_S BL_STEP
-#define KC_DBUG DEBUG
-#define KC_RTOG RGB_TOG
-#define KC_RMOD RGB_MOD
-#define KC_RHUI RGB_HUI
-#define KC_RHUD RGB_HUD
-#define KC_RSAI RGB_SAI
-#define KC_RSAD RGB_SAD
-#define KC_RVAI RGB_VAI
-#define KC_RVAD RGB_VAD
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
