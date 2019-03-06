@@ -1,31 +1,25 @@
 #include "planck.h"
 #include "action_layer.h"
 #include "eeconfig.h"
-#ifdef BACKLIGHT_ENABLE
-  #include "backlight.h"
-#endif
 
 extern keymap_config_t keymap_config;
 
-#define _QWERTY 0 // QWERTY layer
-#define _LOWER  1 // Lower layer
-#define _RAISE  2 // Raise layer
-#define _NAV    3 // Navigation layer
-#define _MENU 4 // Menu layer
+#define _QWERTY 0
+#define _NAV    1
+#define _LOWER  2
+#define _RAISE  3
+#define _MENU   16
 
+enum custom_keycodes {
+  EXIT = SAFE_RANGE,
+  LOWER,
+  RAISE
+};
 
-//Macro shortcuts
-#define EXIT  M(_QWERTY)
-#define LOWER M(_LOWER)
-#define RAISE M(_RAISE)
-
-// Layer shortcuts
-#define NAV   MO(_NAV)
-
-
-// Fillers to make layering more clear
 #define _______ KC_TRNS
 #define XXXXXXX KC_NO
+
+#define KC_NAV  MO(_NAV)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -44,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
   {KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT},
   {KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT },
-  {KC_ESC,  XXXXXXX, KC_LGUI, KC_LALT, LOWER,   NAV,     KC_SPC,  RAISE,   KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE}
+  {KC_ESC,  XXXXXXX, KC_LGUI, KC_LALT, LOWER,   KC_NAV,  KC_SPC,  RAISE,   KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE}
 },
 
 /* Nav layer
@@ -104,9 +98,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Menu
  * ,-----------------------------------------------------------------------------------.
- * |      |      |      |      |      |      |      |      |      |      |      | CAD  |
+ * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |      |      |      | NKRO |
+ * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -114,25 +108,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_MENU] = {
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LALT(LCTL(KC_DEL))},
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, MAGIC_TOGGLE_NKRO},
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, RESET  }
 }
 
 };
 
-// Macro actions
-const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
-{
-  switch (id) {
-    case _QWERTY: // exit back to default layer
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case EXIT:
       if (record->event.pressed) {
         layer_clear();
         clear_keyboard();
       }
       break;
-    case _LOWER:
+    case LOWER:
       if (record->event.pressed) {
         layer_on(_LOWER);
         update_tri_layer(_LOWER, _RAISE, _MENU);
@@ -141,7 +133,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
         update_tri_layer(_LOWER, _RAISE, _MENU);
       }
       break;
-    case _RAISE:
+    case RAISE:
       if (record->event.pressed) {
         layer_on(_RAISE);
         update_tri_layer(_LOWER, _RAISE, _MENU);
@@ -151,5 +143,5 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
       }
       break;
   }
-  return MACRO_NONE;
+  return true;
 }
