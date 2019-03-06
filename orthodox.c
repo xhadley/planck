@@ -11,9 +11,9 @@ extern keymap_config_t keymap_config;
 #define _ADJUST	16
 
 enum custom_keycodes {
-	QWERTY = SAFE_RANGE,
-	LOWER,
-	RAISE
+  QWERTY = SAFE_RANGE,
+  LOWER,
+  RAISE
 };
 
 
