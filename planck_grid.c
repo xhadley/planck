@@ -58,19 +58,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Raise
  * ,-----------------------------------------------------------------------------------.
- * | Tab  |   1  |   2  |   3  |   4  |   /  |      |   (  |   )  |   _  |      | Bksp |
+ * | Tab  |   1  |   2  |   3  |   4  |   5  |      |   (  |   )  |   _  |      | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Shift|   5  |   6  |   7  |   8  |   *  |      |   {  |   }  |   \  |      |  Del |
+ * | Shift|   6  |   7  |   8  |   9  |   0  |      |   {  |   }  |   \  |      |  Del |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl |   9  |   0  |   -  |   +  |   =  |      |   [  |   ]  |   |  |      | Enter|
+ * | Ctrl |   /  |   *  |   -  |   +  |   =  |      |   [  |   ]  |   |  |      | Enter|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Esc  |      | Win  | Alt  | Lower| Space| Space| Raise|      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = {
-  {_______, KC_1,    KC_2,    KC_3,    KC_4,    KC_SLSH, XXXXXXX, KC_LPRN, KC_RPRN, KC_UNDS, XXXXXXX, _______},
-  {_______, KC_5,    KC_6,    KC_7,    KC_8,    KC_ASTR, XXXXXXX, KC_LCBR, KC_RCBR, KC_BSLS, XXXXXXX, KC_DEL },
-  {_______, KC_9,    KC_0,    KC_MINS, KC_PLUS, KC_EQL,  XXXXXXX, KC_LBRC, KC_RBRC, KC_PIPE, XXXXXXX, _______},
+  {_______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    XXXXXXX, KC_LPRN, KC_RPRN, KC_UNDS, XXXXXXX, _______},
+  {_______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    XXXXXXX, KC_LCBR, KC_RCBR, KC_BSLS, XXXXXXX, KC_DEL },
+  {_______, KC_SLSH, KC_ASTR, KC_MINS, KC_PLUS, KC_EQL,  XXXXXXX, KC_LBRC, KC_RBRC, KC_PIPE, XXXXXXX, _______},
   {_______, XXXXXXX, _______, _______, _______, _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX}
 },
 
