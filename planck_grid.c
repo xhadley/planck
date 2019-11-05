@@ -5,9 +5,10 @@
 extern keymap_config_t keymap_config;
 
 #define _QWERTY 0
-#define _NAV    1
-#define _LOWER  2
-#define _RAISE  3
+#define _GAME	1
+#define _NAV    2
+#define _LOWER  3
+#define _RAISE  4
 #define _MENU   16
 
 enum custom_keycodes {
@@ -19,6 +20,7 @@ enum custom_keycodes {
 #define _______ KC_TRNS
 #define XXXXXXX KC_NO
 
+#define KC_GAME TG(_GAME)
 #define KC_NAV  MO(_NAV)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -31,33 +33,51 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  | Enter|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Esc  |      | Win  | ALT  | Lower| NAV  | Space| Raise| MPRV | MPLY | MNXT | Mute |
+ * | Esc  | GAME | Win  | ALT  | Lower| NAV  | Space| Raise| MPRV | MPLY | MNXT | Mute |
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = {
   {KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
   {KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT},
   {KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT },
-  {KC_ESC,  XXXXXXX, KC_LGUI, KC_LALT, LOWER,   KC_NAV,  KC_SPC,  RAISE,   KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE}
+  {KC_ESC,  KC_GAME, KC_LGUI, KC_LALT, LOWER,   KC_NAV,  KC_SPC,  RAISE,   KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE}
+},
+
+/* Game
+ * ,-----------------------------------------------------------------------------------.
+ * | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Shift|   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |   "  |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Ctrl |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  | Enter|
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Esc  | GAME | Win  | ALT  | Lower| Space| NAV  | Raise| MPRV | MPLY | MNXT | Mute |
+ * `-----------------------------------------------------------------------------------'
+ */
+[_QWERTY] = {
+  {KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
+  {KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT},
+  {KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT },
+  {KC_ESC,  KC_GAME, KC_LGUI, KC_LALT, LOWER,   KC_SPC,  KC_NAV,  RAISE,   KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE}
 },
 
 /* Nav layer
  * ,-----------------------------------------------------------------------------------.
- * | Tab  |      |      |  Up  |      |      |      | Home | PgUp | Ins  |PrtScn| Del  |
+ * | Tab  |      |      |  Up  |      |      |      | Home | PgUp | Ins  | Del  | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Shift|      | Left | Down |Right |      |      | End  | PgDn |      |      |      |
+ * | Shift|      | Left | Down |Right |      |      | End  | PgDn |PrntSc|      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl |      |      |      |      |      |      |      |      |      |      | Enter|
+ * | Ctrl |      |      |      |  F5  |      |      |      |      |      |      | Enter|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      | Win  | Alt  |      | NAV  |      |      |      |      |      |      |
+ * |      |      | Win  | Alt  |      | NAV  | NAV  |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 
 [_NAV] = {
-  {_______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_PGUP, KC_INS,  KC_PSCR, KC_DEL },
-  {_______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, KC_END,  KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX},
-  {_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______},
-  {XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX}
+  {_______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_PGUP, KC_INS,  KC_DEL,  KC_BSPC},
+  {_______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, KC_END,  KC_PGDN, KC_PSCR, XXXXXXX, XXXXXXX},
+  {_______, XXXXXXX, XXXXXXX, XXXXXXX, KC_F5,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______},
+  {XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX}
 },
 
 /* Lower

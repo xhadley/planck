@@ -5,9 +5,9 @@
 extern keymap_config_t keymap_config;
 
 #define _QWERTY 0
-#define _NAV    1
-#define _LOWER  2
-#define _RAISE  3
+#define _NAV    2
+#define _LOWER  3
+#define _RAISE  4
 #define _MENU   16
 
 enum custom_keycodes {
@@ -43,20 +43,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Nav layer
  * ,-----------------------------------------------------------------------------------.
- * | Tab  |      |      |  Up  |      |      |      | Home | PgUp | Ins  |PrtScn| Del  |
+ * | Tab  |      |      |  Up  |      |      |      | Home | PgUp | Ins  | Del  | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Shift|      | Left | Down |Right |      |      | End  | PgDn |      |      |      |
+ * | Shift|      | Left | Down |Right |      |      | End  | PgDn |PrntSc|      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl |      |      |      |      |      |      |      |      |      |      | Enter|
+ * | Ctrl |      |      |      |  F5  |      |      |      |      |      |      | Enter|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      | NAV  | Win  | Alt  |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 
 [_NAV] = {
-  {_______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_PGUP, KC_INS,  KC_PSCR, KC_DEL },
-  {_______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, KC_END,  KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX},
-  {_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______},
+  {_______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_PGUP, KC_INS,   KC_DEL, KC_BSPC},
+  {_______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, KC_END,  KC_PGDN, KC_PSCR, XXXXXXX, XXXXXXX},
+  {_______, XXXXXXX, XXXXXXX, XXXXXXX, KC_F5,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______},
   {XXXXXXX, _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX}
 },
 
